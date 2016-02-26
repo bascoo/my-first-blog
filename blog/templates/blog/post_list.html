@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<html>
+    <head>
+
+        <title>Alex' first blog</title>
+       
+      
+    </head>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.date_published }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <h5> Author: {{ post.author }}</h5>
+        <p>{{ post.body|linebreaks }}</p>
+    </div>
+    {% endfor %}
+</html>
