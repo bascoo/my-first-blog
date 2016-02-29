@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
+from django.views import generic
 from .models import Post
 
 
@@ -10,3 +11,6 @@ def post_list(request):
 
 	return render(request, 'blog/post_list.html', {'posts': posts})
 
+class DetailView(generic.DetailView):
+    model = Post
+    template_name = 'blog/detail.html'
