@@ -1,0 +1,13 @@
+body{
+        margin:0 0 0 0;
+        font-family:arial;
+}
+
+nav { 
+    position: top, fixed; 
+    margin-top: 0;
+    width: 100%; 
+    background-color: black; 
+    
+}
+        
