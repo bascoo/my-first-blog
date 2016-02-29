@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
       
     </head>
-    {% for post in posts %}
+    {% for post in latest_post_list %}
     <div>
         <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
         <p>published: {{ post.date_published }}</p>
