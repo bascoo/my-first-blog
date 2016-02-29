@@ -9,6 +9,8 @@ class Post(models.Model):
 	body = models.TextField()
 	date_published = models.DateTimeField('Date Published')
 	created_date = models.DateTimeField('Created Date')
+	image = models.ImageField(upload_to='media/%Y/%m/%d/', blank= True)
+	image_title = models.CharField(max_length=20, unique=True)
 
 	def __unicode__(self):
 		return self.title	
@@ -16,4 +18,6 @@ class Post(models.Model):
 	def publish(self):
 		self.date_published = timezone.now()
 		self.save()
+
+
 
