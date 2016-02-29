@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^$', 'home.views.index'),
 	url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^blog/', include('blog.urls', namespace="blog")),
     # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

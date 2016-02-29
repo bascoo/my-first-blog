@@ -15,7 +15,7 @@
     <div>
         <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
         <p>published: {{ post.date_published }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
+        <h1><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h1>
         <h5> Author: {{ post.author }}</h5>
         #}<p>{{ post.body|linebreaks }}</p>
     </div>

@@ -11,6 +11,15 @@ def post_list(request):
 
 	return render(request, 'blog/post_list.html', {'posts': posts})
 
+class IndexView(generic.ListView):
+    template_name = 'blog/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.filter(pub_date__lte=timezone.now())
+
+
 class DetailView(generic.DetailView):
     model = Post
     template_name = 'blog/detail.html'
