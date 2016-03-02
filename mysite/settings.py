@@ -4,6 +4,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+## TODO: WHY THE FUCK IS THIS?? 
+SITE_ID = 1
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -25,9 +28,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_extensions',
+    'sorl.thumbnail',
     'polls',
     'blog',
     'home', 
+    'contact',
+    'newsletter',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,6 +106,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/blog/'
 
 
-
+# Email settings for a local e-mail service
+EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend' 
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False 
+EMAIL_PORT = 1025
 
 
