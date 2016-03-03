@@ -105,7 +105,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/blog/'
 
-
+## TODO: REMOVE lcoal back end mailings service 
 # Email settings for a local e-mail service
 EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend' 
 DEFAULT_FROM_EMAIL = 'testing@example.com'

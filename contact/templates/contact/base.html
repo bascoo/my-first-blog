@@ -38,25 +38,17 @@
 	        
 
 	    </div> 
+		
+	 	{% block content %}
+        {% endblock %}
 
-	{# TODO: maak een extended block #}
-	{# {% block title %}Contact - {{ block.super }}{% endblock %} #}
-
-	{# {% block content %} #}
-		<h1>Contact</h1>
-		<form role="form" action="" method="post">
-		    {% csrf_token %}
-		    {{ form }}
-		    <button type="submit">Submit</button>
-		</form>
-
-
-
+	
 	<footer class="container-fluid text-center">
 	  <p>Footer Text</p>
 	</footer>
 
 	</body>
-</html>
+</html>	
 
-{# {% endblock %} #}
+
+
