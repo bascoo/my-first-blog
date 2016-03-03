@@ -1,23 +1,20 @@
-{% load staticfiles %}
+{% extends 'blog/base.html' %}
 
 
-<html>
-    <head>
-        
-        <title>Alex' first blog</title>
-        
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-      
-    </head>
+
+    {% block content %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/liststyle.css' %}" />
+    
     {% for post in latest_post_list %}
-    <div>
-        <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
-        <p>published: {{ post.date_published }}</p>
-        <h1><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h1>
-        <h5> Author: {{ post.author }}</h5>
-        <p>{{ post.body|linebreaks }}</p>
+    <div class="postList">
+        <div class="col-md-4 col-xs-12 col-sm-6 post">
+            <br>
+            <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
+            <h3><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h3>
+            <p> {{ post.date_published }} | <strong>by {{ post.author }} </strong></p>
+            <p>{{ post.sec_title|linebreaks }}</p>           
+        </div>
     </div>
     {% endfor %}
-</html>
+    {% endblock %}

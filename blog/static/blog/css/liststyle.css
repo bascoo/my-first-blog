@@ -1,0 +1,12 @@
+.post img  { 
+    max-width: 80%;
+    height: auto;
+
+}
+
+
+.postList { 
+    padding-left: 10%; 
+    padding-right: 10%; 
+}
+
