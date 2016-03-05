@@ -5,3 +5,6 @@ def index(request):
     return render(request , 'home/index.html')
 
 
+def verhalen(request): 
+    return render(request , 'home/verhalen.html')
+
