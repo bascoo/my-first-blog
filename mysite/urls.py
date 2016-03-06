@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 # from .home import views 
 
 urlpatterns = [
-    url(r'^$', 'home.views.index'),
+    url(r'^$', include('home.urls', namespace="home")),
     url(r'^stories/', 'home.views.verhalen'),
+    url(r'^aboutus/', 'home.views.aboutus'), 
 	url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls', namespace="blog")),

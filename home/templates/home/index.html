@@ -36,8 +36,13 @@
         
         <span>
             <div class="row"> 
-                <div class="col-sm-4">
-                <!--TO DO: ACTIVITEITEN APP HIER --> 
+                <div class="col-md-4 col-xs-12 col-sm-6 event">
+                {% for event in latest_event_list %}
+                    <img class="scale-with-grid" src="{{ event.image.url }}" alt ={{ event.image_title }} />
+                    <h3><a href="{{ event.link }}">{{ event.title }}</a></h3>
+                    <p><strong> {{ event.date_event }} </strong></p>
+                    <p>{{ event.description }}</p>         
+                {% endfor %}
                 </div>
                     <div class="col-sm-4">
                         <!-- TO DO: LAY OUT -->

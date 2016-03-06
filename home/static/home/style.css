@@ -30,6 +30,15 @@
       padding: 15px;
     }
     
+    .event {
+        overflow: auto; 
+        
+    }
+    
+    .event img {
+        max-width: 80%;
+        height: auto;      
+    }
     
     .logoHeader {
         height: 100px; 
