@@ -1,18 +1,24 @@
 /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
+      background-color: black;
+      padding-left: 10%;
+      padding-right: 10%;
       margin-bottom: 0;
       border-radius: 0;
-      height: 5px;
+      min-height: 80px;
     }
     
     .navbar-nav > li > a, .navbar-brand {
     padding-top:4px;
     padding-bottom:0;
-    height: 28px;
-    }
-    .navbar {min-height:28px;
+    height: 10px;
     }
     
+    .itemList {
+        padding-top: 50px;
+        
+    }
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
     
@@ -29,16 +35,11 @@
       color: white;
       padding: 15px;
     }
+   
     
-    
-    .logoHeader {
-        height: 100px; 
-        Background-color: #101010;
-    }
-    
-    .logoHeader img { 
-    height: 100%;
-    width: 100%;
+    .logo img {
+        height: 100%; 
+        width: auto;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
