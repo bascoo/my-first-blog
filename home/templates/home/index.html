@@ -23,7 +23,7 @@
               <p><a href="#">Link</a></p>
             </div>
             <div class="col-sm-10 text-left"> 
-              <h1>Welcome</h1>
+              <h1>Dare to be Grey</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               <hr>
               <iframe width="600" height="345"
@@ -36,7 +36,11 @@
         
         <span>
             <div class="row"> 
-                <div class="col-md-4 col-xs-12 col-sm-6 event">
+                <div class="col-md-4 col-xs-12 col-sm-6 socialframe">
+                <div class="titlebox">
+                <h3>Agenda</h3>
+                </div>
+                <div class="eventlist">
                 {% for event in latest_event_list %}
                     <img class="scale-with-grid" src="{{ event.image.url }}" alt ={{ event.image_title }} />
                     <h3><a href="{{ event.link }}">{{ event.title }}</a></h3>
@@ -44,11 +48,15 @@
                     <p>{{ event.description }}</p>         
                 {% endfor %}
                 </div>
-                    <div class="col-sm-4">
+                </div>
+                    <div class="col-md-4 col-xs-12 col-sm-6 socialframe">
                         <!-- TO DO: LAY OUT -->
+                        <div class="titlebox">
+                        <h3>Vind ons op Facebook</h3> 
+                        </div>
                         <div class="fb-page" data-href="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble"><a href="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble">Dare to be Grey</a></blockquote></div></div>
                       </div>
-                        <div class="col-sm-4"> 
+                        <div class="col-md-4 col-xs-12 col-sm-6 socialframe"> 
                             <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/BarackObama" data-widget-id="704988734316519424">Tweets door @BarackObama</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>      

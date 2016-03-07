@@ -30,18 +30,37 @@
       padding: 15px;
     }
     
-    .event {
+    .titlebox {
+        background-color: black;
+        color: white;
+
+    }
+
+    
+    
+    .fb-like {
+        left: 40%;
+    }
+    
+    .socialframe { 
+        padding-left: 5%;
+        padding-right: 5%; 
+    }
+    
+    .eventlist {
         overflow: auto; 
+        max-height: 500px;
         
     }
     
-    .event img {
+    .eventlist img {
         max-width: 80%;
         height: auto;      
     }
     
     .logoHeader {
         height: 100px; 
+        width: 100%;
         Background-color: #101010;
     }
     
