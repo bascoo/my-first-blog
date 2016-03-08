@@ -40,6 +40,8 @@
     }
     
     .titlebox {
+        padding-top: 2%;
+        padding-bottom: 2%;
         background-color: black;
         color: white;
 
@@ -74,7 +76,7 @@
     .eventlist {
         overflow: auto; 
         max-height: 600px;
-        padding-left: 15%;     
+        padding-left: 10%;     
     }
     
     .eventlist img {
@@ -93,7 +95,7 @@
     width: 100%;
     }
     
-    .row{
+    .{
         padding-bottom: 5%
     }
 
