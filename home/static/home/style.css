@@ -22,6 +22,10 @@
     iframe[seamless] { 
     display: block;
     }
+    
+    .sliderFrame {
+        width: 100%; 
+    }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
