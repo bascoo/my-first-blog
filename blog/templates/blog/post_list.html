@@ -6,29 +6,28 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/liststyle.css' %}" />
         
-
-   <div class="container-fluid text-center">
-     <div class="themaweekintro">    
-        <div class="row thema">
-            <div class="col-sm-10 text-left"> 
-                <h1>Overzicht Themaweek</h1>
-                <p> De internationale dag van de ijsbeer wordt sinds 2011 jaarlijks gehouden op 27 februari om aandacht te vragen voor het leefgebied van de ijsbeer.Deze dag wordt georganiseerd door "Polar Bears International" voor de bewustwording van de impact die de wereldwijde opwarming van de Aarde en het zee-ijs heeft op ijsberen. Hieruit volgt dat er aandacht wordt gevraagd om manieren te vinden die de CO2-uitstoot zou kunnen verminderen.Dierentuinen gebruiken deze dag om de bezoeker te informeren over de instandhouding van de ijsbeer-populaties. Men hoopt ook politieke invloed te kunnen uitoefenen.</p>
-            </div>
+   <div class="pageContent">
+       <div class="container-fluid text-center">
+         <div class="themaweekIntro row">    
+                <div class="col-sm-10 text-left"> 
+                    <h1>Overzicht Themaweek</h1>
+                    <p> De internationale dag van de ijsbeer wordt sinds 2011 jaarlijks gehouden op 27 februari om aandacht te vragen voor het leefgebied van de ijsbeer.Deze dag wordt georganiseerd door "Polar Bears International" voor de bewustwording van de impact die de wereldwijde opwarming van de Aarde en het zee-ijs heeft op ijsberen. Hieruit volgt dat er aandacht wordt gevraagd om manieren te vinden die de CO2-uitstoot zou kunnen verminderen.Dierentuinen gebruiken deze dag om de bezoeker te informeren over de instandhouding van de ijsbeer-populaties. Men hoopt ook politieke invloed te kunnen uitoefenen.</p>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
-    
+        
 
-    {% for post in latest_post_list %}
-    <div class="postList" >
-        <div class="col-md-4 col-xs-12 col-sm-6 post">
-            <br>
-            <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
-            <h3><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h3>
-            <p> {{ post.date_published }} | <strong>by {{ post.author }} </strong></p>
-            <p>{{ post.sec_title|linebreaks }}</p>           
+        {% for post in latest_post_list %}
+        <div class="postList" >
+            <div class="col-md-4 col-xs-12 col-sm-6 post">
+                <br>
+                <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
+                <h3><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h3>
+                <p> {{ post.date_published }} | <strong>by {{ post.author }} </strong></p>
+                <p>{{ post.sec_title|linebreaks }}</p>           
+            </div>
         </div>
-
+        {% endfor %}
     </div>
-    {% endfor %}
     {% endblock %}

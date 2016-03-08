@@ -1,12 +1,14 @@
 .post img  { 
     max-width: 80%;
     height: auto;
-
 }
 
-.themaweekintro{
-	padding-left: 15%;
-	padding-right: 10%;
+.pageContent {
+    padding-top: 50px; 
+}
+
+.themaweekIntro {
+    padding-left: 10%;
 }
 
 .post p {

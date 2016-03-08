@@ -1,23 +1,13 @@
 {% extends 'base/base.html' %}
 
-{% load staticfiles %}
-
         {% block content %}
-        <html>
-            <head>
-                
-                <title>{{ post.title}}</title>
-                
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-                <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-              
-            </head>
-            <div>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/detailcss.css' %}" />
+            <div class="article">
                 <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
-                <p>published: {{ post.date_published }}</p>
-                <h5> Author: {{ post.author }}</h5>
+                <p>{{ post.date_published }} | <strong> {{ post.author }}</strong></p>
+                <hr> 
+                <h2>{{ post.title }} </h2> 
                 <p>{{ post.body|linebreaks }}</p>
             </div>
-        </html>
         {% endblock %}
