@@ -31,14 +31,14 @@
         
             <script>  $(window).scroll(function() {
                             var  mn = $(".showNav");
-                            mo = $(".navbarScroll");
-                            mns = "doNotShowNav";
-                            hdr = $(".navbarStart").height();
+                                mo = $(".navbarScroll");
+                                mns = "doNotShowNav";
+                                hdr = $(".navbarStart").height();
                           if( $(this).scrollTop() > 49 ) {
-                            mn.addClass(mns);  
+                            <!--mn.addClass(mns);  -->
                             mo.removeClass(mns);
                           } else {
-                            mn.removeClass(mns);
+                          <!--  mn.removeClass(mns); -->
                             mo.addClass(mns);
                           }
                     }); </script> <!-- switch navbar --> 
