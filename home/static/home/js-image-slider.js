@@ -2,18 +2,18 @@ var sliderOptions=
 {
 	sliderId: "slider",
 	startSlide: 0,
-	effect: "13",
+	effect: "6,15,1,2,11,12,13,15,16,5,7",
 	effectRandom: false,
 	pauseTime: 2600,
 	transitionTime: 500,
-	slices: 12,
-	boxes: 8,
-	hoverPause: 1,
+	slices: 14,
+	boxes: 11,
+	hoverPause: 2,
 	autoAdvance: true,
-	captionOpacity: 0.3,
-	captionEffect: "fade",
-	thumbnailsWrapperId: "thumbs",
-	m: false,
+	captionOpacity: 0.5,
+	captionEffect: "rotate",
+	thumbnailsWrapperId: null,
+	m: true,
 	license: "mylicense"
 };
 

@@ -13,6 +13,7 @@
     .navbar {min-height:28px;
     }
     
+    
 
     iframe:focus { 
     outline: center;
@@ -40,7 +41,7 @@
     }
     
     .titlebox {
-        padding-top: 2%;
+        padding-top: 0.5%;
         padding-bottom: 2%;
         background-color: black;
         color: white;
@@ -50,7 +51,6 @@
     .missionstatement{ 
         padding-left: 15%;
         padding-right: 5%;
-
     }
     
     .fb-like {
