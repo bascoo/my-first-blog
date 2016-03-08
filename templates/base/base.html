@@ -29,8 +29,21 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
         
+            <script>  $(window).scroll(function() {
+                            var  mn = $(".showNav");
+                            mo = $(".navbarScroll");
+                            mns = "doNotShowNav";
+                            hdr = $(".navbarStart").height();
+                          if( $(this).scrollTop() > 49 ) {
+                            mn.addClass(mns);  
+                            mo.removeClass(mns);
+                          } else {
+                            mn.removeClass(mns);
+                            mo.addClass(mns);
+                          }
+                    }); </script> <!-- switch navbar --> 
         
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbarStart navbar-inverse showNav">
               <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -40,6 +53,29 @@
                   </button>
                   <div class="logo">
                     <a href="http://localhost:8000/"><img src="{% static 'home/logo.jpg' %}" /></a>   
+                  </div>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav navbar-right startItemList">
+                    <li><a href="http://localhost:8000/aboutus">Over ons</a></li>
+                    <li><a href="http://localhost:8000/stories/">50Verhalen</a></li>
+                    <li><a href="http://localhost:8000/blog/">Themaweek</a></li>
+                    <li><a href="http://localhost:8000/contact/">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+        </nav>
+        
+        <nav class="navbar navbarScroll navbar-inverse doNotShowNav">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <div class="logo">
+                    <a href="http://localhost:8000/"><img src="{% static 'home/logobottom.jpg' %}" /></a>   
                   </div>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">

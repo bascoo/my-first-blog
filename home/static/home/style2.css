@@ -5,7 +5,20 @@
       padding-right: 10%;
       margin-bottom: 0;
       border-radius: 0;
-      min-height: 80px;
+    }
+    
+    .navbarStart {
+        min-height: 80px; 
+        height: 80px;
+    }
+    
+    .navbarScroll { 
+        position: fixed; 
+        top: 0px; 
+        width: 100%;
+        z-index: 1; 
+        min-height: 30px; 
+        height: 30px;
     }
     
     .navbar-nav > li > a, .navbar-brand {
@@ -14,7 +27,11 @@
     height: 10px;
     }
     
-    .itemList {
+    .doNotShowNav {
+        display: none;    
+    }
+    
+    .startItemList {
         padding-top: 50px;
         
     }
