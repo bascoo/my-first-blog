@@ -6,14 +6,14 @@ var sliderOptions=
 	effectRandom: false,
 	pauseTime: 2600,
 	transitionTime: 500,
-	slices: 12,
-	boxes: 8,
-	hoverPause: 1,
+	slices: 14,
+	boxes: 11,
+	hoverPause: 2,
 	autoAdvance: true,
-	captionOpacity: 0.3,
+	captionOpacity: 0.5,
 	captionEffect: "fade",
-	thumbnailsWrapperId: "thumbs",
-	m: false,
+	thumbnailsWrapperId: null,
+	m: true,
 	license: "mylicense"
 };
 
