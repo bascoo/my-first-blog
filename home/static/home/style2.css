@@ -1,6 +1,7 @@
 /* Remove the navbar's default margin-bottom and rounded borders */ 
     body{ 
-    overflow-x: hidden; 
+        overflow-x: hidden; 
+        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     }
     
     .navbar {
@@ -39,6 +40,16 @@
         padding-top: 50px;
         
     }
+    
+    .socialIconList { 
+        padding-top: 15px;  
+    }
+
+    .socialIconList img { 
+        height: 25px;
+        width: 25px; 
+    }
+    
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
@@ -50,13 +61,29 @@
       height: 100%;
     }
     
+    
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+      background-color: black;
       color: white;
       padding: 15px;
+      padding-right: 10%;
+      margin-top: 40px;
     }
-   
+    
+    .fb-like {
+        left: 40%;
+    }
+    
+    .socialFooter {
+        position: relative;
+        left: 38%;
+    }
+    
+    .socialFooter li {
+        display: inline-block;
+    }
     
     .logo img {
         height: 100%; 

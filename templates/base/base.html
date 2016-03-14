@@ -17,6 +17,7 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	    
+        <link rel="icon" href="{% static 'home/tablogo.jpg' %}">
 	</head>
 	<body>
 
@@ -62,6 +63,13 @@
                     <li><a href="http://localhost:8000/blog/">Themaweek</a></li>
                     <li><a href="http://localhost:8000/contact/">Contact</a></li>
                   </ul>
+                  <ul class="navbar-nav navbar-right socialIconList">
+                    <li><a href="#"><img src="{% static 'home/YoutubePicto.jpg' %}" /></a></li>
+                    <li><a href="#"><img src="{% static 'home/FacebookPicto.jpg' %}" /></a></li>
+                    <li><a href="#"><img src="{% static 'home/TwitterPicto.jpg' %}" /></a></li>
+                    <li><a href="#"><img src="{% static 'home/InstagramPicto.jpg' %}" /></a></li>
+                    <li><a href="#"><img src="{% static 'home/MailPicto.jpg' %}" /></a></li>
+                  </ul>
                 </div>
               </div>
         </nav>
@@ -94,12 +102,22 @@
 	 	{% block content %}
         {% endblock %}
         </div>
-	
+        
+    
 	<footer class="container-fluid text-center">
-	  <p>Footer Text</p>
+	  <p><strong>De campagne Dare to be Grey staat voor iedereen in het midden van de</strong></p>
+      <p><strong>samenleving met al haar meningen en persoonlijkheden.</strong></p>
+      <p><strong>Kies ook jouw kleur in het grijze!</strong></p>
+      <p><strong>Dare to be Grey!</strong></p>
 
 	  	<div class="fb-like" data-href="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> 
-
+        <ul class="socialIconList socialFooter">
+            <li><a href="#"><img src="{% static 'home/YoutubePicto.jpg' %}" /></a></li>
+            <li><a href="#"><img src="{% static 'home/FacebookPicto.jpg' %}" /></a></li>
+            <li><a href="#"><img src="{% static 'home/TwitterPicto.jpg' %}" /></a></li>
+            <li><a href="#"><img src="{% static 'home/InstagramPicto.jpg' %}" /></a></li>
+            <li><a href="#"><img src="{% static 'home/MailPicto.jpg' %}" /></a></li>
+        </ul>
 	</footer>
 
 	</body>
