@@ -32,16 +32,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+
         
         <span>
-            <div class="row"> 
+            <div class="row socialFeedBlock"> 
                 <div class="col-md-4 col-xs-12 col-sm-6 agendaframe">
                 <div class="titlebox text-center">
                 <h3>Agenda</h3>
                 </div>
                 <br>
-                <div class="eventlist">
+                <div class="eventlist feedFrame">
                 {% for event in latest_event_list %}
                     <img class="scale-with-grid" src="{{ event.image.url }}" alt ={{ event.image_title }} />
                     <h3><a href="{{ event.link }}">{{ event.title }}</a></h3>
@@ -51,13 +52,13 @@
                 </div>
                 </div>
                     <div class="col-md-4 col-xs-12 col-sm-6 facebookframe">
-                        <!-- TO DO: LAY OUT -->
                         <div class="titlebox text-center" >
-                        <h3>Vind ons op Facebook</h3>
+                        <h3> Facebook</h3>
                         </div>
                         <br>
+                        <div class="feedFrame">
                         <div class="fb-page" data-width="420"data-height="600" data-href="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble"><a href="https://www.facebook.com/DaretobeGrey/?notif_t=page_fan&amp;__mref=message_bubble">Dare to be Grey</a></blockquote>
-                        </div>
+                        </div>  </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-xs-12 col-sm-6 twitterframe"> 
@@ -65,8 +66,10 @@
                             <h3>Twitter</h3>
                         </div>
                         <br>
-                        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/BarackObama" data-widget-id="704988734316519424">Tweets door @BarackObama</a>
+                        <div class="feedFrame">
+                        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/DaretobeGrey" data-widget-id="704988734316519424">Tweets door @DaretobeGrey</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
                     </div>      
                     
             </div> 

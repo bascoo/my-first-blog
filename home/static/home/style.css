@@ -1,18 +1,5 @@
- /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      height: 5px;
+    body {
     }
-    
-    .navbar-nav > li > a, .navbar-brand {
-    padding-top:4px;
-    padding-bottom:0;
-    height: 28px;
-    }
-    .navbar {min-height:28px;
-    }
-    
 
     iframe:focus { 
     outline: center;
@@ -21,29 +8,24 @@
     iframe[seamless] { 
     display: block;
     }
+    
+    .feedFrame{
+        border: solid 2px grey;
+        height: 605px;
+        background-color: white;
+        
+    }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
     
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
     
     .titlebox {
         padding-top: 2%;
-        padding-bottom: 2%;
+        padding-bottom: 0%;
         background-color: black;
         color: white;
+        border-bottom: solid 10px #0033CC;
 
     }
 
@@ -55,30 +37,36 @@
     
     
     .agendaframe { 
-        padding-left: 5%;
-        padding-right: 1%;
+        padding-right: 2%;
+        padding-left: 2%;
         
     }
 
     .facebookframe{
-        padding-left: 1%;
-        padding-right: 1%;
+        
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
     .twitterframe{
-        padding-left: 1%;
-        padding-right: 5%;
+        padding-left: 2%;
+        padding-right: 1%;
     }
     
     .eventlist {
         overflow: auto; 
-        max-height: 600px;
+        max-height: 605px;
         padding-left: 10%;     
     }
     
     .eventlist img {
         max-width: 80%;
         height: auto;      
+    }
+    
+    .socialFeedBlock {
+        padding-left:10%;
+        padding-right:10%;
     }
     
     .logoHeader {
