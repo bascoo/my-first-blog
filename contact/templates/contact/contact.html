@@ -2,11 +2,24 @@
 
 
 	{% block content %}
-		<h1>Contact</h1>
-		<form role="form" action="" method="post">
-		    {% csrf_token %}
-		    {{ form.as_p }}
-		    <button type="submit">Submit</button>
-		</form>
+	{% load staticfiles %}
+ 	<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+
+    <div class="container-fluid text-center">
+          <div class="missionstatement">
+            <div class="row content">     
+                 <div class="text-left"> 
+
+					<h1>Contact</h1>
+					<form role="form" action="" method="post">
+					    {% csrf_token %}
+					    {{ form.as_p }}
+					    <button type="submit">Submit</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	{% endblock %}
