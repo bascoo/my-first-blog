@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^contact/', include('contact.urls', namespace="contact")),
     url(r'^newsletter/', include('newsletter.urls')),  
     url(r'^iamgrey/', include('iamgrey.urls', namespace="iamgrey")), 
+    url(r'^partners/', include('partners.urls', namespace="partners")), 
     # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

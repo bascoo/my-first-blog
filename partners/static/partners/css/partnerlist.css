@@ -1,0 +1,18 @@
+.partnerList {
+    padding-left: 10%; 
+    padding-right: 10%;
+    min-height: 250px;
+}
+
+.partnerList a {
+    color: black; 
+}
+
+.partnerList li {
+    list-style-type: none;
+}
+
+.partnerHeader{
+    padding-left: 12%; 
+    padding-right: 12%;
+}

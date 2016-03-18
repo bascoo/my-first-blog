@@ -92,8 +92,20 @@
       margin-top: 80px; 
     }
     
+    footer a { 
+        color: #9d9d9d; 
+    }
+    
     .socialFooter {
         margin-top: 60px;
+    }
+    
+    .footerImage { 
+        padding-left: 10%;
+    }
+    .footerImage img {
+        height: auto;
+        width: 80%;
     }
     
     .inlineFooter {
