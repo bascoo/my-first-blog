@@ -1,0 +1,13 @@
+{% extends 'iamgrey/story_list.html' %}
+
+        {% block lateststory %}
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/detailcss.css' %}" />
+            <div class="article">
+                <img class="scale-with-grid" src="{{ story.image.url }}" alt ={{ story.title }} />
+                <p>{{ story.date_published }} | <strong> {{ story.author }}</strong></p>
+                <hr> 
+                <h2>{{ story.title }} </h2> 
+                <p>{{ story.body|linebreaks }}</p>
+            </div>
+        {% endblock %}

@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'home', 
     'contact',
     'newsletter',
-    'agenda', 
+    'agenda',
+    'iamgrey', 
 )
 
 MIDDLEWARE_CLASSES = (
