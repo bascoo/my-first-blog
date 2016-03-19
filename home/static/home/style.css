@@ -17,7 +17,9 @@
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 650px}
+    .row.content {
+        height: 550px;
+    }
     
     
     .titlebox {
@@ -28,7 +30,9 @@
         border-bottom: solid 10px #0033CC;
 
     }
-
+    .campaignHeader {
+        max-height: 600px;
+    }
     .missionstatement{ 
         padding-left: 15%;
         padding-right: 15%;

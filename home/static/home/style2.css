@@ -6,10 +6,10 @@
     
     .navbar {
       background-color: black;
-      padding-left: 10%;
-      padding-right: 10%;
       margin-bottom: 0;
       border-radius: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
     
     .navbarStart {
@@ -41,10 +41,26 @@
         
     }
     
+    .startItemList li , .itemList li{
+      margin: -2px;   
+    }
+    
+    .navbar-collapse {
+        padding-left: 0%;
+        padding-right: 0%;
+        width: 100%;
+        background-color: black; 
+        color: gray; 
+        z-index: 100;
+        text-align: right;        
+        overflow: hidden;
+        }
+    
     .socialHeader { 
+        top: 0px;
         position: absolute;
         text-align: right;
-        right: 12%;
+        right: 11%;
     }
     
     .socialIconList { 
@@ -72,7 +88,6 @@
         padding-left: 10%; 
     }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 650px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -123,4 +138,24 @@
         padding: 15px;
       }
       .row.content {height:auto;} 
+      
+      .notshowonPhone {
+        display: none;
+      }
+      
+      .startItemList {
+        padding-top: 0;
+        
     }
+      
+      .collapse { 
+      position: absolute;
+      width: 100%;
+      }
+      .collapse li { 
+        padding-right: 10%;
+        margin: 10px;
+      }
+    }
+    
+ 
