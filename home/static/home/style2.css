@@ -10,6 +10,7 @@
       border-radius: 0;
       padding-left: 10%;
       padding-right: 10%;
+      z-index: 100;
       box-shadow: 0px 3px 2px grey;
     }
     
@@ -46,6 +47,11 @@
       margin: -2px;   
     }
     
+    @media screen and (max-width: 767px) {
+        
+    
+    }
+    
     .navbar-collapse {
         padding-left: 0%;
         padding-right: 0%;
@@ -55,7 +61,7 @@
         z-index: 100;
         text-align: right;        
         overflow: hidden;
-        }
+        } 
     
     .socialHeader { 
         top: 0px;
@@ -153,6 +159,11 @@
       .collapse { 
       position: absolute;
       width: 100%;
+      z-index: 100;
+      background-color: black; 
+      color: gray; 
+      text-align: right;        
+        overflow: hidden;
       }
       .collapse li { 
         padding-right: 10%;
