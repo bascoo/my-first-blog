@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<p> test </p>
+	{% for petition in latest_petition_list %}
+		
+		<h1> {{ petition.petition_title }} </h1>
+		<h3> {{ petition.petition_text }} </h3>
+		{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		<form action="{% url 'petition:vote' petition.id %}" method="post">
+		{% csrf_token %}
+	
+		{% for vote in petition.vote_set.all %}
+		{{ vote.vote_title }}
+		<span><input type="submit" name="vote" id="Vote{{ forloop.counter }}" value="{{ vote.id }}" /> <p>{{ vote.votes }} vote{{ vote.votes|pluralize }}</p>
+		<label for="vote{{ forloop.counter }}">{{ vote.vote_text }}</label><br />	
+		<p> {{ vote.votes }} </p>
+		
+		{% endfor %}
+		</form>
+	{% endfor %}
+
+

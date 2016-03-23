@@ -1,13 +1,78 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
 {% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+
+ <span>
+    <div class="durfjijPage">
+
+            <h1> Durf jij? </h1>
+            <div class="row PetitionBlock"> 
+
+                <div class= "col-md-8 cols-xs12 col-sm-12 justifyText">
+                       <p> Dare to be Grey is een initiatief om polarisatie in de samenleving te doorbreken. Zwart-wit denkers
+
+en hun extreme geluiden voeren steeds vaker de boventoon in het debat over de
+
+vluchtelingenstroom en de plaats van de islam in de samenleving. Dare to be Grey wil laten zien dat
+
+er een veel groter grijs midden is. Door een platform te creëren voor persoonlijke verhalen, geeft
+
+Dare to be Grey iedereen met een grijze mening een stem. Samen gaan we voorbij aan zwart-wit
+
+denken! Wil je hieraan meewerken?<p> 
+                </div>
+                
+                <div class="col-md-4 col-xs-12 col-sm-6 petition">
+
+                    {% if latest_question_list %}
+                        <ul>
+                        {% for question in latest_question_list %}
+                            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                                <form action="{% url 'polls:vote' question.id %}" method="post">
+                                {% csrf_token %}
+                                    {% for choise in question.choise_set.all %}
+                                        <p> AL {{ choise.votes }}  GINGEN JE VOOR</p>
+
+
+                                        <span>    <button class="btn btn-success" type="submit" name="choise" id="Choise{{ forloop.counter }}" value="{{choise.id}}" label="DARETOBEGREY">KLIK HIER EN DOE MEE!</button> 
+                                        <label for="choise{{ forloop.counter }}"></label></span>
+                                        
+                                    {% endfor%}
+                                </form>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No Petition available.</p>
+                    {% endif %}
+                </div>
+                
+            </div> 
+            <div class="row Instarow">
+                    <div id="insta-wrap">
+                        <!-- SnapWidget -->
+                        <iframe src="http://snapwidget.com/sc/?h=ZGFyZXRvYmVncmV5fGlufDE1MHwzfDN8fG5vfDV8bm9uZXxvblN0YXJ0fHllc3xubw==&ve=230316" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:150px"></iframe>
+
+                    </div>
+            </div>
+            <div class="row GetFund">
+                    <div class="col-md-8 col-xs-12 col-sm12 getfund justifyText">
+                       <p> It's not like I'm anti-China. I just think it's ridiculous that we allow them to do what they're doing to this country, with the manipulation of the currency, that you write about and understand, and all of the other things that they do.</p> 
+                   </div>
+                    <div class="col-md-4 col-xs-12 col-sm12">
+                        <div class="steunImg">
+                            <img src="{% static 'polls/images/steunDTBGrond.png' %}" alt="DaretobeGrey" >
+                        </div>
+                    </div>
+              
+            </div>
+
+        
+
+
+</span>
+</div>
+
+{% endblock %}
