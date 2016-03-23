@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 
     {% block content %}
+    {% load staticfiles %}
     <div class="container-fluid text-center">
          <div class="missionstatement">    
           <div class="row content">
@@ -8,7 +9,10 @@
               <h1>Wat is Dare to be Grey?</h1>
               <p><strong>Dare to be Grey</strong> is een initiatief om polarisatie in de samenleving te doorbreken. Zwart-wit denkers en hun extreme geluiden voeren steeds vaker de boventoon in het debat over de vluchtelingenstroom en de plaats van de islam in de samenleving. Dare to be Grey wil laten zien dat er een veel groter grijs midden is. Door een platform te creëren voor persoonlijke verhalen, geeft Dare to be Grey iedereen met een grijze mening een stem.</p>
               <hr>
-              
+              <div class="aboutUsImg">
+              <img src="{% static 'home/Aboutusimg.png' %}" alt="DaretobeGrey" >
+              </div>
+              <br>
               <p>Benieuwd naar onze <a href="http://localhost:8000/partners/">partners?</a></p>
               </div>
             </div>
