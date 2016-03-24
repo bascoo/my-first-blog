@@ -23,11 +23,11 @@
                     <div class="missionstatement">
                         <div class="row">     
                             <div class="text-left justifyText latestStory post"> 
+                                {% if story.image.url %}
                                 <img class="scale-with-grid" src="{{ story.image.url }}" alt ={{ story.title }} />
+                                {% endif %}
                                 <h3><a href="{% url 'iamgrey:detail' story.id %}">{{ story.title }}</a></h3>
-                                <p> {{ story.date_published }} | <strong>by {{ story.author }} </strong></p>
-                                <p>{{ story.body|linebreaks }}</p>   
-                                
+                                <p> {{ story.date_published }} | <strong>by {{ story.author }} </strong></p>                                
                             </div>
                         </div>
                         <hr>

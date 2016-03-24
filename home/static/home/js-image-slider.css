@@ -8,7 +8,7 @@
 #sliderFrame {position:relative;background-color:White;}      
 
 #slider, #slider div.sliderInner {
-    width:1500px;height:420px;/* Must be the same size as the slider images */
+    width:100%;height:100%;/* Must be the same size as the slider images */
 }
 
 #slider 
