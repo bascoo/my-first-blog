@@ -126,7 +126,9 @@
         box-shadow: 0 0 5px grey;
     }
     
-
+    .center {
+        text-align: center;
+    }
 
    .{
         padding-bottom: 5%

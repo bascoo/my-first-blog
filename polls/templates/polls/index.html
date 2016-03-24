@@ -29,11 +29,19 @@
                                 <form action="{% url 'polls:vote' question.id %}" method="post">
                                 {% csrf_token %}
                                     {% for choise in question.choise_set.all %}
-                                        <p> <strong>AL {{ choise.votes }} ANDEREN GINGEN JE VOOR!</strong</p>
-
-
-                                        <span>    <button class="btn btn-success" type="submit" name="choise" id="Choise{{ forloop.counter }}" value="{{choise.id}}" label="DARETOBEGREY" onclick="window.open('https://www.facebook.com/DaretobeGrey/', 'venster_naam','venster_opties'); return false">KLIK HIER EN DOE MEE!</button> 
+                                        <div class="center">
+                                        <p> <strong>AL {{ choise.votes }} ANDEREN GINGEN JE VOOR!</strong></p>
+                                        <script>
+                                            function fbShare(url, title, descr, image, winWidth, winHeight) {
+                                                var winTop = (screen.height / 2) - (winHeight / 2);
+                                                var winLeft = (screen.width / 2) - (winWidth / 2);
+                                                window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+                                            }
+                                        </script>
+                                        <span>    <button class="btn btn-success" type="submit" name="choise" id="Choise{{ forloop.counter }}" value="{{choise.id}}" label="DARETOBEGREY" onclick="javascript:fbShare('https://www.facebook.com/DaretobeGrey/', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)">KLIK HIER EN DEEL!</button> 
+                                        <script> </script>
                                         <label for="choise{{ forloop.counter }}"></label></span>
+                                        </div>
                                         
                                     {% endfor%}
                                 </form>
@@ -54,10 +62,11 @@
             </div>
             <div class="row GetFund">
                     <div class="col-md-8 col-xs-12 col-sm12 getfund justifyText">
-                       <p> It's not like I'm anti-China. I just think it's ridiculous that we allow them to do what they're doing to this country, with the manipulation of the currency, that you write about and understand, and all of the other things that they do.</p> 
+                       <h3>Donaties</h3>
+                       <p> Dare to be Grey is een initiatief om polarisatie in de samenleving te doorbreken. Dit kunnen wij in ons eentje niet bereiken. Daarom kan de campagne wel wat hulp gebruiken! Wil jij ons meehelpen? Word dan donateur van Dare to be Grey! Bijdrages kunnen overgemaakt worden naar NL91INGB0702153931 ten name van ‘Dare to be Grey’.</p>
                    </div>
                     <div class="col-md-4 col-xs-12 col-sm12">
-                        <div class="steunImg">
+                        <div class="steunImg center">
                             <img src="{% static 'polls/images/steunDTBGrond.png' %}" alt="DaretobeGrey" >
                         </div>
                     </div>
