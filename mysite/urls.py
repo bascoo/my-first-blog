@@ -8,7 +8,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$', include('home.urls', namespace="home")),
     url(r'^stories/', 'home.views.verhalen'),
-    url(r'^aboutus/', 'home.views.aboutus'), 
+    url(r'^overons/', 'home.views.aboutus'), 
+    url(r'^colofon/', 'home.views.colofon'), 
 	url(r'^durfjij/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls', namespace="blog")),

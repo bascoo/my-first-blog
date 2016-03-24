@@ -5,9 +5,11 @@
         <link rel="stylesheet" type="text/css" href="{% static 'blog/css/detailcss.css' %}" />
             <div class="article">
                 <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
-                <p>{{ post.date_published }} | <strong> {{ post.author }}</strong></p>
-                <hr> 
                 <h2>{{ post.title }} </h2> 
+                <div class ="justifyText">
                 <p>{{ post.body|linebreaks }}</p>
+                </div>
+                <hr>
+                <p>{{ post.date_published }} | <strong> {{ post.author }}</strong></p>
             </div>
         {% endblock %}

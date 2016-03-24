@@ -40,8 +40,8 @@
         max-height: 600px;
     }
     .missionstatement{ 
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 13%;
+        padding-right: 13%;
 
     }
     
@@ -100,8 +100,8 @@
     }
     
     .durfjijPage { 
-        padding-left: 12%; 
-        padding-right: 12%;
+        padding-left: 13%; 
+        padding-right: 13%;
     }
 
     .steunImg img{
@@ -117,7 +117,7 @@
     }
 
     .contact {
-        margin-left: -13%;
+        margin-left: -10%;
     }
 
     iframe {
@@ -126,6 +126,7 @@
         box-shadow: 0 0 5px grey;
     }
     
+
 
    .{
         padding-bottom: 5%

@@ -8,7 +8,7 @@
         <div class="container-fluid text-center">
           <div class="missionstatement">
             <div class="row">     
-                 <div class="text-left"> 
+                 <div class="text-left justifyText"> 
                      <h1>Ik ben Grijs</h1>
                      <p> De internationale dag van de ijsbeer wordt sinds 2011 jaarlijks gehouden op 27 februari om aandacht te vragen voor het leefgebied van de ijsbeer.Deze dag wordt georganiseerd door "Polar Bears International" voor de bewustwording van de impact die de wereldwijde opwarming van de Aarde en het zee-ijs heeft op ijsberen. Hieruit volgt dat er aandacht wordt gevraagd om manieren te vinden die de CO2-uitstoot zou kunnen verminderen.Dierentuinen gebruiken deze dag om de bezoeker te informeren over de instandhouding van de ijsbeer-populaties. Men hoopt ook politieke invloed te kunnen uitoefenen.</p>
                      <hr>
@@ -22,20 +22,21 @@
                 <div class="container-fluid text-center">
                     <div class="missionstatement">
                         <div class="row">     
-                            <div class="text-left"> 
+                            <div class="text-left justifyText latestStory post"> 
                                 <img class="scale-with-grid" src="{{ story.image.url }}" alt ={{ story.title }} />
                                 <h3><a href="{% url 'iamgrey:detail' story.id %}">{{ story.title }}</a></h3>
                                 <p> {{ story.date_published }} | <strong>by {{ story.author }} </strong></p>
                                 <p>{{ story.body|linebreaks }}</p>   
-                                <hr>
+                                
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             {% endif %}
         {% endfor %}
         
-        <div class="missionstatement">
+     <div class="missionstatement">
         {% for story in latest_story_list %}
             {% if story != latest_story %}
                 <div class="postList" >

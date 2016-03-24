@@ -18,3 +18,6 @@ def verhalen(request):
 
 def aboutus(request):
     return render(request , 'home/aboutus.html')
+    
+def colofon(request):
+    return render(request , 'home/colofon.html')

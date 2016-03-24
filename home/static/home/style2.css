@@ -165,8 +165,8 @@
       
       .collapse { 
       position: absolute;
-      width: 100%;
-      z-index: 100;
+      width: 100% !important;
+      z-index: 100 !important;
       background-color: black; 
       color: gray; 
       text-align: right;        
