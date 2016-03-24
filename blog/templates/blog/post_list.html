@@ -12,7 +12,7 @@
             <div class="row">     
                  <div class="text-left justifyText"> 
                      <h1>Dare to be Grey on Tour</h1>
-                     <p> De internationale dag van de ijsbeer wordt sinds 2011 jaarlijks gehouden op 27 februari om aandacht te vragen voor het leefgebied van de ijsbeer.Deze dag wordt georganiseerd door "Polar Bears International" voor de bewustwording van de impact die de wereldwijde opwarming van de Aarde en het zee-ijs heeft op ijsberen. Hieruit volgt dat er aandacht wordt gevraagd om manieren te vinden die de CO2-uitstoot zou kunnen verminderen.Dierentuinen gebruiken deze dag om de bezoeker te informeren over de instandhouding van de ijsbeer-populaties. Men hoopt ook politieke invloed te kunnen uitoefenen.</p>
+                     <p> Tussen 11 en 15 april gaat Dare to be Grey on tour! De campagne zal door het hele land reizen om om de grijze stem van de straat te laten horen. Dit is jouw kans om onderdeel te worden van de campagne! De week zal worden bekroond met een interessant symposium in het Utrechtse academiegebouw. Blijf via deze pagina of via onze social media op de hoogte van de evenementen en locaties!</p>
                      <hr>
                      </div>
                 </div>
@@ -27,7 +27,7 @@
                 <br>
                 <img class="scale-with-grid" src="{{ post.image.url }}" alt ={{ post.title }} />
                 <h3><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></h3>
-                <p> {{ post.date_published }} | <strong>by {{ post.author }} </strong></p>
+                <p> {{ post.date_published }} | <strong>{{ post.author }} </strong></p>
                 <p>{{ post.sec_title|linebreaks }}</p>           
             </div>
         </div>

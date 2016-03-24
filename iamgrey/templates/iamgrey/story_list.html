@@ -27,7 +27,8 @@
                                 <img class="scale-with-grid" src="{{ story.image.url }}" alt ={{ story.title }} />
                                 {% endif %}
                                 <h3><a href="{% url 'iamgrey:detail' story.id %}">{{ story.title }}</a></h3>
-                                <p> {{ story.date_published }} | <strong>by {{ story.author }} </strong></p>                                
+                                <p> {{ story.body }} </p>
+                                <p> {{ story.date_published }} | <strong>{{ story.author }} </strong></p>                                
                             </div>
                         </div>
                         <hr>
@@ -44,7 +45,7 @@
                     <br>
                     <img class="scale-with-grid" src="{{ story.image.url }}" alt ={{ story.title }} />
                     <h3><a href="{% url 'iamgrey:detail' story.id %}">{{ story.title }}</a></h3>
-                    <p> {{ story.date_published }} | <strong>by {{ story.author }} </strong></p>
+                    <p> {{ story.date_published }} | <strong>{{ story.author }} </strong></p>
                     <p>{{ story.sec_title|linebreaks }}</p>           
                 </div>
                 </div>

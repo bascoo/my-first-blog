@@ -5,17 +5,16 @@
     {% block content %}   
     {% load staticfiles %}
               
-                <div id="sliderFrame">
-                   <div class="group1-Wrapper">
-                      <a onclick="imageSlider.previous()" class="group1-Prev"></a>
-                      <a onclick="imageSlider.next()" class="group1-Next"></a>
-                    </div>
-                    <div id="slider">          
-                        <a href="http://bascoo.pythonanywhere.com/polls/"><img src="http://data.desustorage.org/r9k/image/1457/05/1457053761184.jpg"/></a> 
-                        <a href="http://www.highsnobiety.com"><img src="http://www.private-logistic.nl/wp-content/uploads/2015/03/sterren-2-1500x420.jpg" /></a> 
-                        <a href="http://bascoo.pythonanywhere.com/polls/"><img src="http://www.divacamp.nl/wp-content/uploads/impressie_bg-1500x420.jpg" /></a> 
-                    </div>
-                </div> 
+      <div id="ninja-slider">
+        <div class="inner">
+            <ul>
+                <li><a href="stories"><img class="ns-img" src="{% static 'home/SLIDER1.png' %}" style="cursor:pointer;"></a></li>
+                <li><a href="https://www.facebook.com/DaretobeGrey/?fref=ts"><img class="ns-img" src="{% static 'home/SLIDER2.png' %}" style="cursor:pointer;"></a></li>
+                <li><a href="iamgrey"><img class="ns-img" src="{% static 'home/SLIDER3.png' %}" style="cursor:pointer;"></a></li>
+            </ul>
+        </div>
+    </div>
+              
 
       
         <div class="container-fluid text-center">
@@ -28,7 +27,7 @@
                           <div class="col-md-8 col-xs-12 col-sm-12 agendaframe">
                           
                           <iframe  frameborder="2" align="center"
-                            src="http://www.youtube.com/embed/NSxAjCa7Wwc">
+                            src="https://www.youtube.com/embed/Q79-vdCJWhY">
                           </iframe>
                           </div>
                           <div class="col-md-4 col-xs-12 col-sm-12 justifyText">
