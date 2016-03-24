@@ -13,16 +13,11 @@
 
                 <div class= "col-md-8 cols-xs12 col-sm-12 justifyText">
                        <p> Dare to be Grey is een initiatief om polarisatie in de samenleving te doorbreken. Zwart-wit denkers
-
-en hun extreme geluiden voeren steeds vaker de boventoon in het debat over de
-
-vluchtelingenstroom en de plaats van de islam in de samenleving. Dare to be Grey wil laten zien dat
-
-er een veel groter grijs midden is. Door een platform te creëren voor persoonlijke verhalen, geeft
-
-Dare to be Grey iedereen met een grijze mening een stem. Samen gaan we voorbij aan zwart-wit
-
-denken! Wil je hieraan meewerken?<p> 
+                        en hun extreme geluiden voeren steeds vaker de boventoon in het debat over de
+                        vluchtelingenstroom en de plaats van de islam in de samenleving. Dare to be Grey wil laten zien dat
+                        er een veel groter grijs midden is. Door een platform te creëren voor persoonlijke verhalen, geeft
+                        Dare to be Grey iedereen met een grijze mening een stem. Samen gaan we voorbij aan zwart-wit
+                        denken! Wil je hieraan meewerken?<p> 
                 </div>
                 
                 <div class="col-md-4 col-xs-12 col-sm-6 petition">
@@ -34,10 +29,10 @@ denken! Wil je hieraan meewerken?<p>
                                 <form action="{% url 'polls:vote' question.id %}" method="post">
                                 {% csrf_token %}
                                     {% for choise in question.choise_set.all %}
-                                        <p> AL {{ choise.votes }}  GINGEN JE VOOR</p>
+                                        <p> <strong>AL {{ choise.votes }} ANDEREN GINGEN JE VOOR!</strong</p>
 
 
-                                        <span>    <button class="btn btn-success" type="submit" name="choise" id="Choise{{ forloop.counter }}" value="{{choise.id}}" label="DARETOBEGREY">KLIK HIER EN DOE MEE!</button> 
+                                        <span>    <button class="btn btn-success" type="submit" name="choise" id="Choise{{ forloop.counter }}" value="{{choise.id}}" label="DARETOBEGREY" onclick="window.open('https://www.facebook.com/DaretobeGrey/', 'venster_naam','venster_opties'); return false">KLIK HIER EN DOE MEE!</button> 
                                         <label for="choise{{ forloop.counter }}"></label></span>
                                         
                                     {% endfor%}
